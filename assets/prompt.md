@@ -1,5 +1,6 @@
 ## Character Description
 
+* Species: Anthropomorphic capybara with a friendly, smiling capybara head and a humanoid female body.
 * Name: Dr. Anya Capy
 * Gender: Female
 * Age: 35
@@ -18,8 +19,8 @@
 ### Visual Appearance
 
 > **Head:** Capybara head with coarse, mixed light and dark brown fur. Small, round, brown furry ears. Small, dark eyes set on the sides of the head. Snout is blunt and broad with visible nostrils and subtle whiskers.
-> **Body:** Humanoid female torso.
-> **Skin/Fur:** Arms and hands are covered in capybara-brown short fur.
+> **Body:** Humanoid female torso, medium-slim.
+> **Skin/Fur:** Arms and hands are covered in capybara-brown short fur of the same color as her face's fur.
 > **Attire:** A plain, heather-grey, short-sleeved T-shirt, standard crew neckline. The shirt is relatively form-fitting and is neatly tucked into the waistband of the pants. Medium-wash blue denim jeans, They appear to be high-waisted with a slim or straight-leg cut, The cuffs of the jeans are rolled up just above the ankles. Casual, low-top sneakers (similar in style to classic canvas shoes), feature a dark grey or black upper body, white laces, a white rubber toe cap, and flat white soles. No jewelry, no accessories.
 
 ## Video Shot Instructions (to be added to the video generation prompt)
