@@ -23,10 +23,14 @@ from google.adk.models.llm_response import LlmResponse
 from google.adk.models.llm_request import LlmRequest
 from google.adk.tools import AgentTool
 
-_, project_id = google.auth.default()
-os.environ.setdefault("GOOGLE_CLOUD_PROJECT", project_id) # type: ignore
+try:
+    _, project_id = google.auth.default()
+except google.auth.exceptions.DefaultCredentialsError:
+    project_id = None
+
+os.environ.setdefault("GOOGLE_CLOUD_PROJECT", project_id or "") # type: ignore
 os.environ.setdefault("GOOGLE_CLOUD_LOCATION", "global")
-os.environ.setdefault("GOOGLE_GENAI_USE_VERTEXAI", "True")
+# os.environ.setdefault("GOOGLE_GENAI_USE_VERTEXAI", "True")
 
 from subagents import script_sequencer_agent, video_agent
 from utils.storage_utils import upload_data_to_gcs

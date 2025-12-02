@@ -42,14 +42,18 @@ class IdentityTokenHeaderProvider:
         if self.outside_cloud: # Not elif because outside_cloud might change
             # Local run, fetching authenticated user's identity token
             # from gcloud CLI
-            id_token = subprocess.check_output(
-                [
-                    "gcloud",
-                    "auth",
-                    "print-identity-token",
-                    "-q"
-                ]
-            ).decode().strip()
+            try:
+                id_token = subprocess.check_output(
+                    [
+                        "gcloud",
+                        "auth",
+                        "print-identity-token",
+                        "-q"
+                    ]
+                ).decode().strip()
+            except (FileNotFoundError, subprocess.CalledProcessError):
+                # gcloud not found or failed, assume no auth needed (e.g. local MCP)
+                id_token = None
         if id_token:
             headers["Authorization"] = f"Bearer {id_token}"
         return headers
