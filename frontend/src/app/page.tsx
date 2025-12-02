@@ -46,6 +46,7 @@ export default function Home() {
         <div className="selection-box" style={{ display: 'inline-block' }}>
           <span className="selection-label">Orion</span>
           <h1 style={{ fontSize: '3rem', fontWeight: 900 }}>Video Avatar Agent</h1>
+          {/* v1.0.0 - Vercel Deployment Ready */}
         </div>
         <div style={{ position: 'absolute', top: 10, right: 100 }}>
           <TriangleRed />
