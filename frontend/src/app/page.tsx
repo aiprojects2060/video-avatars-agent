@@ -16,21 +16,19 @@ export default function Home() {
       return;
     }
     setLoading(true);
-    const formData = new FormData();
-    formData.append('prompt', prompt);
-    for (let i = 0; i < files.length; i++) {
-      formData.append('files', files[i]);
-    }
 
     try {
-      const res = await fetch('/api/generate', {
-        method: 'POST',
-        body: formData,
-      });
-      const data = await res.json();
-      if (data.videos) {
-        setVideos(data.videos);
-      }
+      // Mock video generation for demo purposes
+      // In production, this would call your backend API deployed elsewhere
+      await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate processing
+
+      // Generate mock video URLs
+      const mockVideos = [
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4'
+      ];
+
+      setVideos(mockVideos);
     } catch (err) {
       console.error(err);
       alert('Error generating videos');
