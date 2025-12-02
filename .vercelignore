@@ -1,0 +1,15 @@
+*.py
+*.pyc
+__pycache__/
+.venv/
+venv/
+backend/
+agents/
+mcp/
+notebook/
+deployment/
+videos/
+*.mp4
+*.avi
+.env
+.git
