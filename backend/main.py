@@ -36,7 +36,7 @@ app.add_middleware(
 # Mount local files
 app.mount("/files", StaticFiles(directory="backend/files"), name="files")
 
-@app.post("/generate")
+@app.post("/api/generate")
 async def generate(prompt: str = Form(...), files: List[UploadFile] = File(...)):
     print(f"Received prompt: {prompt}")
     print(f"Received {len(files)} files")

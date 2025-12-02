@@ -23,7 +23,7 @@ export default function Home() {
     }
 
     try {
-      const res = await fetch('http://localhost:8001/generate', {
+      const res = await fetch('/api/generate', {
         method: 'POST',
         body: formData,
       });
